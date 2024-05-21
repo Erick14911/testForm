@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <?php
-$logica = false;
-$vacia;
-$respuesta = (isset($logica))? 'esta seteado': 'no esta seteado'; // empty() isset()
-echo "Logico ".$respuesta."<br/>";
-$respuesta = (isset($vacia))? 'esta seteado': 'no esta seteado';
-echo "Vacia ".$respuesta."<br/>";
-$respuesta = (empty($logica))? 'esta vacio':'no esta vacio';
-echo "Logico ".$respuesta."<br/>";
-$respuesta = (empty($vacia))? 'esta vacio':'no esta vacio';
-echo "Vacia ".$respuesta."<br/>";
-
-?>
-<?php
+// Si en envio por POST esta vacio se redirecciona a la pagina index.php
 if(!$_POST){
-    HEADER('Location: error.php');
+    HEADER('Location: ../index.php');
 }
 $data_array = [];
 $_error = '';
@@ -97,28 +85,5 @@ if(isset($_POST['submit'])){
 };
 ?>
 <?php
-function connect(){
-    $connection = new mysqli('localhost','root',"",'db_persona');
-    if($connection->connect_errno){
-        HEADER('Location: error.php');
-    }else{
-        mysqli_query($connection, "SET NAMES 'utf8'");
-    //    $connection -> set_charset("utf8");
-    }
-    return $connection;
-}
-$connect1 = connect();
-/* $query->num_rows; var_dump($query->fetch_assoc()['']); ->affected_rows; */
-$sqlInsert = "INSERT INTO tableA(nombre, apellido, telefono, email, fecha, edad, educacion) VALUES(?, ?, ?, ?, ?, ?, ?);";
-$statement1 = $connect1->prepare($sqlInsert);
-extract($data_array);
-$statement1->bind_param('sssssis', $nombre, $apellido, $telefono, $email, $fecha, $edad, $educacion);
-if(!empty($nombre) && !empty($apellido) && !empty($telefono) && !empty($email) && !empty($fecha) && !empty($edad) && !empty($educacion)){
-    $statement1->execute();
-    HEADER('Location: ../index.php');
-}
-
-/* ->num_rows; ->rowCount();  ->affected_rows; */
-/* ->fetch();  ->fetchAll();  ->fetch_assoc()['']; ->get_result(); */
-
+require_once "validate-view.php";
 ?>

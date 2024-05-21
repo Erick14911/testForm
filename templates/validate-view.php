@@ -1,4 +1,5 @@
 <!--@author:Erick14911-->
+<!DOCTYPE html>
 <html lang="ES">
   <head>
     <meta charset="UTF-8" />
@@ -19,6 +20,13 @@
           <h1 class="title">Validate</h1>
         </hgroup>
       </header>
+<?php
+if(!$_error){
+    echo $_error;
+}else{
+    echo "<h2>"."Validacion exitosa"."</h2>";
+}
+?>
       <article id="box-article">
         <ul id="box-data">
 <?php
