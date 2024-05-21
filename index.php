@@ -1,20 +1,5 @@
 <!--@author:Erick14911-->
 <!DOCTYPE html>
-<?php
-function connect(){
-    $connection = new mysqli('localhost','root',"",'db_persona');
-    if($connection->connect_errno){
-        HEADER('Location: error.php');
-    }else{
-       mysqli_query($connection, "SET NAMES 'utf8'");
-    //    $connection -> set_charset("utf8");
-    }
-    return $connection;
-}
-$connect2 = connect();
-$sqlSelectReporte = "SELECT * FROM v_reporte_diario;";
-$query = $connect2->query($sqlSelectReporte);
-?>
 <html lang="ES">
   <head>
     <meta charset="UTF-8" />
@@ -40,15 +25,9 @@ $query = $connect2->query($sqlSelectReporte);
         <button id="btnConsulta" class="btn">Consulta</button>
       </nav>
      
-      <section id="section" class="oculta">
+      <section id="section" class="muestra">
 <?php
 require_once "templates/formulario.php";
-?>
-      </section>
-      <section id="section2" class="oculta">
-        <h1 class="title">Reporte</h1>
-<?php
-require_once "templates/tabla.php";
 ?>
       </section>
     </main>
