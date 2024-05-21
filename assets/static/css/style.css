@@ -1,0 +1,187 @@
+/* @author:Erick14911
+ * google: color picker, htmlcolorcodes.com, charref
+ * google: patter background, colorhunt.co, coolors.co
+ * #112233; rgb(0,0,0); rgba(0,0,0,1); 
+ * Unidades: rem, em, vh, vh, vmax, vmin, %
+ * #div_n, #figure_n,  #img_map_n, #form_n #form_file, #table_n, #video_n, #track_n, #file-n, #window_n
+ * #header, #nav, #aside, #section, #footer var(--black)
+ * */
+@charset "UTF-8";
+:root{
+  --black: #000;
+  --white:  #fff;
+  --shadow-a: #000;
+  --shadow-b: #000;
+  --borde-a: #000;
+  --mark: rgb(0, 0, 0);
+  --font: Helvetica, Arial. sans-serif;
+}
+@media (prefers-color-scheme: dark){
+    :root{
+      --black: #fff;
+      --white:  #000;
+      --shadow-a: #fff;
+      --shadow-b: #fff;
+      --borde-a: #fff;
+      --mark: rgb(255, 255, 255);
+      --font: Helvetica, Arial. sans-serif;
+    }
+}
+
+*,
+::before,
+::after{
+  margin: 0px; 
+  padding: 0px; 
+  vertical-align: baseline;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html{font-size: 62.5%;}
+
+body{scroll-behavior: smooth;
+     text-rendering: optimizeSpeed;
+     line-height: 1.5;
+     min-height: 100vh;}
+
+header, section, footer, aside, nav, article, figure, figcaption, hgroup,
+img, video, iframe, picture,figure{display: block; max-width: 100%;}
+
+#content{  
+  width: 100%;
+  height: auto;
+}
+
+form, input, select, textarea, button, label{
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+a{text-decoration: none;}
+
+p a{display: inline;}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+/*****************************************/
+#header{
+    width: 100%
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px;
+}
+.title{
+    color: blue;
+    font-family: Arial, Sans-Serif;
+    /* bold; lighter; */
+    font-weight: bold;
+    /* italic; oblique; */
+    font-style: italic;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    font-size: 48px;
+    text-shadow: -4px -2px 0px black;
+    /* capitalize; uppercase; lowercase; */
+    text-transform: uppercase;
+}
+#nav{
+    width: 100%;
+    height: auto;
+    background-color: gray;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.btn{
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    padding: 3px;
+    margin-right: 20px;
+}
+.dato{
+    color: blue;
+    font-family: Sans-Serif;
+    /* bold; lighter; */
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    font-size: 48px;
+    color: black;
+    text-transform: uppercase;
+}
+#form-test{
+    width: clamp(50rem, 50%, 70rem);
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: left;
+    margin: 0px auto;
+    padding: 0px;
+}
+#form-test legend{
+    color: red;
+    font-weight: bold;
+    font-size: 28px;
+}
+.box_form{
+    font-family: Bodoni;
+    font-size: 20px;
+}
+.button{
+    padding: 3px;
+    font-size: 20px;
+}
+#box-data{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Geramond;
+}
+#section2{
+    width: 100%;
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px;
+}
+.oculta{
+    display: none;
+}
+.muestra{
+    border-top: 2px solid black;
+    display: block;
+    padding-top: 30px;
+}
+#section2 table{
+    width: 60%;
+    height: auto;
+    /* center; right; bottom; top; */
+    margin-left: 20%;
+    margin-top: 30px;
+}
+.headTable{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 1px solid black;
+}
+.rowTable{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.dataTable{
+    border-right: 1px solid black;
+    margin: 2px;
+    padding: 12px;
+    font-size: 16px;
+}
