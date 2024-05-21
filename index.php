@@ -7,7 +7,6 @@ function connect(){
         HEADER('Location: error.php');
     }else{
        mysqli_query($connection, "SET NAMES 'utf8'");
-    //    $connection -> set_charset("utf8");
     }
     return $connection;
 }
