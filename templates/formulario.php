@@ -15,7 +15,7 @@
              <input id="telefono" class="input" name="telefono" type="tel" required minlength="10" /> 
              <br/>  
              <label class="label" for="fecha">Fecha</label>
-             <input id="fecha" class="input" name="fecha" type="date"/>
+             <input id="fecha" class="input" name="fecha" type="date" require/>
              <br/>  
              <label class="label" for="edad">Edad</label>
              <input id="edad" class="input" name="edad" type="number" min="1" max="100"/>

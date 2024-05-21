@@ -137,8 +137,11 @@ p a{display: inline;}
     font-size: 20px;
 }
 .button{
+    margin-top: 15px;
     padding: 3px;
     font-size: 20px;
+    color: white;
+    background-color: blue;
 }
 #box-data{
     font-size: 24px;
