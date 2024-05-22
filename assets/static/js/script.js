@@ -16,6 +16,18 @@ window.addEventListener('load', () => {
       }
   }, false);
   ////////////////////////////////////////////////////////
+  function Const(atr){
+    this.atr = atr; 
+    this.toString = (args) => {
+      return args + ' ' + this.atr;
+    };
+  }
+//  Objeto.prototype.newAtr = '';
+  let _obj = new Const()
+  console.log(_obj.atr?.data);
+//  let _arrayArgs = [];
+//  _obj.toString.apply(_obj2,_arrayArgs);
+  Object.seal(_obj); // Object.freeze(_json);
   let objPersona = new Persona('Luis','Torres',32,'4488339922','torre11@gmail.com','Licenciatura','fecha');
   console.log(objPersona.toString());
   ////////////////////////////////////////////////////////
