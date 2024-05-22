@@ -25,7 +25,8 @@ $query = $connect2->query($sqlSelectReporte);
     <meta name="description" content="" />
     <meta http-equiv="content-style-type" content="text/css" />  
     <link type="text/css" rel="stylesheet" href="assets/static/css/style.css">
-    <script type="text/javascript" src="assets/static/js/script.js" defer></script><!--async--> 
+<!--El script tiene que cambiar su type="module" para implementar la sentencia import-->
+    <script type="module" src="assets/static/js/script.js" defer></script><!--async--> 
     <title>Test</title>
   </head>
   <body>

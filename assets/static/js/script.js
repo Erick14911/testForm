@@ -3,15 +3,21 @@ import Persona from "./Persona.js";
 
 window.addEventListener('load', () => {
   const _form = document.forms['form-test'];
+  let listDatos = [];
   _form.addEventListener('submit', (event) => {
+      event.preventDefault();
       let changes = event.target;
-      for(let i=1; i < _form.length-1;i++){
-        localStorage.setItem(_form[i].name,_form[i].value);
+      for(let i=1; i < changes.length-1;i++){
+        localStorage.setItem(changes[i].name,changes[i].value);
+        listDatos.push(changes[i].value);
+      }
+      for(let i = 0; i < changes.length-1; i++){
+        console.log(listDatos[i]);
       }
   }, false);
   ////////////////////////////////////////////////////////
-  let objOne = new Persona('Luis','Torres',32,'4488339922','torre11@gmail.com','Licenciatura','fecha');
-  console.log(objOne.datosBasicos());
+  let objPersona = new Persona('Luis','Torres',32,'4488339922','torre11@gmail.com','Licenciatura','fecha');
+  console.log(objPersona.toString());
   ////////////////////////////////////////////////////////
   const registro = document.querySelector('#section');
   const consulta = document.querySelector('#section2');
