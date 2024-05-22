@@ -18,15 +18,15 @@
       <header id="header">
         <hgroup id="hgroup">
           <h1 class="title">Validate</h1>
-        </hgroup>
-      </header>
 <?php
 if(!$_error){
     echo $_error;
 }else{
-    echo "<h2>"."Validacion exitosa"."</h2>";
+    echo "<h2 style='font-size: 20px;'>"."Validacion exitosa"."</h2>";
 }
 ?>
+        </hgroup>
+      </header>
       <article id="box-article">
         <ul id="box-data">
 <?php
