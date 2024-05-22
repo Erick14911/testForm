@@ -16,6 +16,22 @@ window.addEventListener('load', () => {
       }
   }, false);
   ////////////////////////////////////////////////////////
+  let _arrayJson = Object.values(_json);
+  const _json = {
+    [_id]: {..._json1},
+    mssg,
+    delBack: (v) => { return _json[v];},
+    set mssg(mssg){
+      this.mssg = mssg;
+    }
+    get _toString(){
+      return this.mssg;
+    }
+  };
+  /* delete _json.mssg; Object.assign(_json1,_json2);
+   * const {mssg, ...obj} = _json;
+   * const {name: rename, subJson: {data}} = _json
+   * Object.seal(_json); // Object.freeze(_json); */
   function Const(atr){
     this.atr = atr; 
     this.toString = (args) => {
