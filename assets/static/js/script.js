@@ -14,6 +14,8 @@ window.addEventListener('load', () => {
     // SE HACE UN RECORRIDO SOBRE LOS DATOS DEL FORMULARIO GUARDANDO EN EL LOCALSTORAGE
       for(let i=1; i < form.length-1; i++){
         localStorage.setItem(form[i].name, form[i].value);
+        // Se limpian los input de manera que el formulario quede en blanco
+        form[i].value = null;
       }
   }, false);
 });
