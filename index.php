@@ -39,7 +39,7 @@ $query = $connect2->query($sqlSelectReporte);
         <button id="btnConsulta" class="btn">Consulta</button>
       </nav>
      
-      <section id="section" class="oculta">
+      <section id="section" class="muestra">
 <?php
 require_once "templates/formulario.php";
 ?>
