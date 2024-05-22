@@ -1,3 +1,4 @@
+import Persona from "./Persona.js";
 'use strict'; 
 
 window.addEventListener('load', () => {
@@ -8,6 +9,10 @@ window.addEventListener('load', () => {
         localStorage.setItem(_form[i].name,_form[i].value);
       }
   }, false);
+  ////////////////////////////////////////////////////////
+  let objOne = new Persona('Luis','Torres',32,'4488339922','torre11@gmail.com','Licenciatura','fecha');
+  console.log(objOne.datosBasicos());
+  ////////////////////////////////////////////////////////
   const registro = document.querySelector('#section');
   const consulta = document.querySelector('#section2');
   function switchDisplayRegistro(){
