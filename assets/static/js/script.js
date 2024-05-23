@@ -11,41 +11,28 @@ window.addEventListener('load', () => {
         localStorage.setItem(changes[i].name,changes[i].value);
         listDatos.push(changes[i].value);
       }
-      for(let i = 0; i < changes.length-1; i++){
+      for(let i = 0; i < changes.length-2; i++){
         console.log(listDatos[i]);
+        changes[i].value = null;
       }
+      function jsonPersona(list){
+        this.nombre = list[0]; 
+        this.apellido = list[1]; 
+        this.gmail = list[2]; 
+        this.telefono = list[3]; 
+        this.fecha = list[4]; 
+        this.edad = list[5]; 
+        this.educacion = list[6]; 
+      }
+      let objPersona = new jsonPersona(listDatos);
+      Object.freeze(objPersona);
+      console.table(objPersona);
+      localStorage.setItem("objJson", JSON.stringify(objPersona));
+    //
+      let arrayJson = Object.values(objPersona);
+      let objClase = new Persona(arrayJson[0], arrayJson[1], arrayJson[2], arrayJson[3], arrayJson[4], arrayJson[5], arrayJson[6],);
+      console.log(objClase.toString());
   }, false);
-  ////////////////////////////////////////////////////////
-  let _arrayJson = Object.values(_json);
-  const _json = {
-    [_id]: {..._json1},
-    mssg,
-    delBack: (v) => { return _json[v];},
-    set mssg(mssg){
-      this.mssg = mssg;
-    }
-    get _toString(){
-      return this.mssg;
-    }
-  };
-  /* delete _json.mssg; Object.assign(_json1,_json2);
-   * const {mssg, ...obj} = _json;
-   * const {name: rename, subJson: {data}} = _json
-   * Object.seal(_json); // Object.freeze(_json); */
-  function Const(atr){
-    this.atr = atr; 
-    this.toString = (args) => {
-      return args + ' ' + this.atr;
-    };
-  }
-//  Objeto.prototype.newAtr = '';
-  let _obj = new Const()
-  console.log(_obj.atr?.data);
-//  let _arrayArgs = [];
-//  _obj.toString.apply(_obj2,_arrayArgs);
-  Object.seal(_obj); // Object.freeze(_json);
-  let objPersona = new Persona('Luis','Torres',32,'4488339922','torre11@gmail.com','Licenciatura','fecha');
-  console.log(objPersona.toString());
   ////////////////////////////////////////////////////////
   const registro = document.querySelector('#section');
   const consulta = document.querySelector('#section2');
