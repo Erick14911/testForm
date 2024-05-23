@@ -32,6 +32,7 @@ window.addEventListener('load', () => {
       let arrayJson = Object.values(objPersona);
       let objClase = new Persona(arrayJson[0], arrayJson[1], arrayJson[2], arrayJson[3], arrayJson[4], arrayJson[5], arrayJson[6],);
       console.log(objClase.toString());
+      console.table(objClase);
   }, false);
   ////////////////////////////////////////////////////////
   const registro = document.querySelector('#section');
